@@ -1,0 +1,17 @@
+Package: uniteScrapeR
+Title: Scrape UNITE by Species or SH Code with Selenider
+Version: 0.0.1
+Authors@R: person("Dylan", "Stephens", email = "dylandylanms@gmail.com", role = c("aut","cre"))
+Description: Provides two scraping workflows for the UNITE website: search by species
+    name and expand by SH code. Supports background runs and pretty progress. Returns
+    a tidy dataframe with harmonised columns.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Depends: R (>= 4.1.0)
+Imports: selenider, dplyr, stringr, purrr, tibble, rlang, cli, glue, readr, jsonlite, callr
+Suggests: Biostrings, testthat (>= 3.0.0)
+Config/testthat/edition: 3
+URL: https://github.com/yourname/uniteScrapeR
+BugReports: https://github.com/yourname/uniteScrapeR/issues

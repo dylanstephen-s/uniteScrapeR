@@ -1,0 +1,18 @@
+---
+title: "README"
+output: html_document
+---
+
+# uniteScrapeR
+
+Currently the package uses a visible Selenium-driven Chrome session. It will open a browser window while it runs. Feed a list of species names into the function and it will return sequences and metadata info.
+
+# install devtools if needed
+# install.packages("devtools")
+devtools::install_github("dylanstephen-s/uniteScrapeR")
+
+library(uniteScrapeR)
+library(cli)
+
+# Usage
+res1 <- unite_scrape(c("Caloplaca albolutescens", "Lobaria pulmonaria"), method = "species")
