@@ -5,7 +5,7 @@ output: html_document
 
 # uniteScrapeR
 
-Currently the package uses a visible Selenium-driven Chrome session. It will open a browser window while it runs. Feed a list of species names into the function and it will return sequences and metadata info.
+This package takes a list of scientific names for fungi and queries INSD and UNITE grabbing the available metadata and the sequences from the database. Currently the package uses a visible Selenium-driven Chrome session. It will open a browser window while it runs. Feed a list of species names into the function and it will return sequences and metadata info.
 
 # install devtools if needed
 # install.packages("devtools")
@@ -15,4 +15,7 @@ library(uniteScrapeR)
 library(cli)
 
 # Usage
-res1 <- unite_scrape(c("Caloplaca albolutescens", "Lobaria pulmonaria"), method = "species")
+dataframe <- scrape_by_species(c("Caloplaca albolutescens", "Lobaria pulmonaria"),
+                              delay_seconds = 1.2, # OPTIONAL
+                              max_variants = 20, # OPTIONAL
+                              max_pages = 50) # OPTIONAL
